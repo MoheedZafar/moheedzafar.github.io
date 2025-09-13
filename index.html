@@ -7,6 +7,8 @@
   <title>Moheed Zafar | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/heroicons@2.0.18/dist/heroicons.min.js"></script>
+
 </head>
 
 <body class="bg-black text-white">
@@ -25,21 +27,77 @@
     </path>
   </svg>
 
-  <!-- Header -->
-  <header class="absolute top-0 left-0 w-full text-center py-20 md:py-28 z-10">
-    <h1 class="text-4xl md:text-5xl font-bold tracking-wide mb-2 text-white">Moheed Zafar</h1>
-    <p class="text-lg md:text-xl text-gray-300">iOS Developer | SwiftUI Specialist</p>
-    <a href="quote.html" target="_blank"
-   class="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full font-semibold text-sm shadow-md hover:bg-gray-100 transition mt-3">
-      Get a Quote
-    </a>
-  </header>
-</div>
+ <!-- Header -->
+<!-- Header -->
+<header class="absolute top-0 left-0 w-full text-center py-24 md:py-32 z-10">
+
+  <!-- Name with glow -->
+  <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-white relative inline-block">
+    <span class="relative z-10">Moheed Zafar</span>
+    <span class="absolute inset-0 blur-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-30 -z-10"></span>
+  </h1>
+
+  <!-- Role with Apple logo -->
+  <p class="flex items-center justify-center gap-2 text-lg md:text-2xl text-gray-200 font-medium animate-fadeIn">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" 
+         class="w-6 h-6 text-gray-300">
+      <path d="M16.365 1.43c-.94.055-2.055.657-2.73 1.453-.597.698-1.113 1.746-.916 2.782 
+               1.058.085 2.14-.52 2.804-1.325.64-.783 1.117-1.837.842-2.91zM19.574 
+               7.334c-1.527-.06-2.835.86-3.57.86-.755 0-1.9-.823-3.136-.798-1.613.024-3.104.94-3.933 
+               2.393-1.67 2.88-.425 7.132 1.185 9.464.79 1.128 1.732 2.39 
+               2.976 2.344 1.197-.046 1.645-.757 3.087-.757 
+               1.424 0 1.832.757 3.107.73 1.29-.021 2.1-1.135 
+               2.888-2.271.9-1.32 1.27-2.597 1.29-2.665-.028-.012-2.488-.954-2.516-3.783-.02-2.364 
+               1.936-3.49 2.027-3.552-1.11-1.626-2.803-1.82-3.419-1.844z"/>
+    </svg>
+    iOS Developer <span class="text-gray-500">|</span> SwiftUI Specialist
+  </p>
+
+  <!-- Minimal Apple-style tagline -->
+  <p class="mt-6 text-gray-300 text-lg md:text-2xl italic tracking-wide animate-fadeInSlow">
+    Building sleek, App Store-ready experiences.
+  </p>
+
+  <!-- Glassmorphism skill badges -->
+  <div class="flex justify-center gap-3 mt-8 animate-fadeInSlow">
+    <span class="backdrop-blur-md bg-white/10 text-white/90 px-4 py-1.5 rounded-full text-sm font-medium border border-white/20">
+      SwiftUI
+    </span>
+    <span class="backdrop-blur-md bg-white/10 text-white/90 px-4 py-1.5 rounded-full text-sm font-medium border border-white/20">
+      iOS Development
+    </span>
+    <span class="backdrop-blur-md bg-white/10 text-white/90 px-4 py-1.5 rounded-full text-sm font-medium border border-white/20">
+      App Store Launches
+    </span>
+  </div>
+</header>
+
+<!-- Animations -->
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeIn { animation: fadeIn 1s ease-out forwards; }
+  .animate-fadeInSlow { animation: fadeIn 1.6s ease-out forwards; }
+</style>
 
 
- <!-- Projects Section -->
-  <section class="px-6 py-12">
-    <h2 class="text-4xl font-semibold mb-10 text-center text-white">Projects</h2>
+
+
+<!-- Previous Work Section -->
+<section class="relative py-28 md:py-36 bg-black text-white">
+  
+  <!-- Section header -->
+  <div class="mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3 relative inline-block">
+      <span class="relative z-10">Previous Work</span>
+    <span class="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full opacity-70"></span>
+    </h2>
+    <p class="text-gray-400 text-lg md:text-xl max-w-2xl">
+      A showcase of iOS apps I’ve built and launched on the App Store.
+    </p>
+  </div>
 <div class="grid gap-6 grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
       <!-- Start pasting projects from HTML 1 -->
 <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 text-white h-full">
@@ -283,8 +341,19 @@
 
 
  <!-- Reviews Section -->
-<section class="px-6 py-12">
-  <h2 class="text-4xl font-semibold mb-10 text-center text-white">Client Reviews</h2>
+<!-- Client Reviews Section -->
+<section class="relative py-28 md:py-36 bg-black text-white">
+  
+  <!-- Section header -->
+  <div class="mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-3 relative inline-block">
+      <span class="relative z-10">Client Reviews</span>
+    <span class="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full opacity-70"></span>
+    </h2>
+    <p class="text-gray-400 text-lg md:text-xl max-w-2xl">
+      What clients say about working with me on Upwork and beyond.
+    </p>
+  </div>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     
     <!-- Review 1 -->
@@ -392,13 +461,18 @@
         <a href="https://www.linkedin.com/in/moheed-zafar-8a4a5716b" target="_blank" class="hover:text-secondary underline">LinkedIn</a>
         <a href="https://www.freelancer.com/u/MzHashmi" target="_blank" class="hover:text-secondary underline">Freelancer</a>
         <a href="https://www.upwork.com/freelancers/moheedz" target="_blank" class="hover:text-secondary underline">Upwork</a>
-        <a href="mailto:Moheedzafarhashmi@gmail.com" class="hover:text-secondary underline">Email</a>
+        <a href="mailto:Moheedzafarhashmi@gmail.com" class="hover:text-secondary underline">Email</a>      
       </div>
+      
 </section>
   <!-- Footer -->
   <footer class="text-center py-6 text-sm text-white opacity-80">
     <!-- Hire Me Button -->
-
+<a href="quote.html" target="_blank"
+   class="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full font-semibold text-sm shadow-md hover:bg-gray-100 transition mt-3">
+      Get a Quote
+    </a>
+    <br>
     &copy; 2025 Moheed Zafar. All rights reserved.
   </footer>
 </body>

@@ -14,8 +14,8 @@
 <body class="bg-black text-white">
   <!-- Header -->
  <!-- Wave Divider with Black Gradient and Header -->
-<div class="relative">
-  <svg class="w-full h-40 md:h-64" viewBox="0 0 1440 320" preserveAspectRatio="none">
+<div class="relative overflow-hidden pb-10 md:pb-0">
+  <svg class="w-full h-28 sm:h-40 md:h-64" viewBox="0 0 1440 320" preserveAspectRatio="none">
     <defs>
       <linearGradient id="blackGradient" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0%" stop-color="#000000" />
@@ -29,16 +29,16 @@
 
  <!-- Header -->
 <!-- Header -->
-<header class="absolute top-0 left-0 w-full text-center py-24 md:py-32 z-10">
+<header class="relative md:absolute top-0 left-0 w-full text-center px-4 py-8 sm:py-10 md:py-32 z-10">
 
   <!-- Name with glow -->
-  <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-white relative inline-block">
+  <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-5 md:mb-6 text-white relative inline-block">
     <span class="relative z-10">Moheed Zafar</span>
     <span class="absolute inset-0 blur-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-30 -z-10"></span>
   </h1>
 
   <!-- Role with Apple logo -->
-  <p class="flex items-center justify-center gap-2 text-lg md:text-2xl text-gray-200 font-medium animate-fadeIn">
+  <p class="flex flex-wrap items-center justify-center gap-2 text-base sm:text-lg md:text-2xl text-gray-200 font-medium animate-fadeIn">
     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" 
          class="w-6 h-6 text-gray-300">
       <path d="M16.365 1.43c-.94.055-2.055.657-2.73 1.453-.597.698-1.113 1.746-.916 2.782 
@@ -50,16 +50,16 @@
                2.888-2.271.9-1.32 1.27-2.597 1.29-2.665-.028-.012-2.488-.954-2.516-3.783-.02-2.364 
                1.936-3.49 2.027-3.552-1.11-1.626-2.803-1.82-3.419-1.844z"/>
     </svg>
-    iOS Developer <span class="text-gray-500">|</span> SwiftUI Specialist
+    iOS, Android & Full Stack Developer <span class="text-gray-500">|</span> SwiftUI Specialist
   </p>
 
   <!-- Minimal Apple-style tagline -->
-  <p class="mt-6 text-gray-300 text-lg md:text-2xl italic tracking-wide animate-fadeInSlow">
-    Building sleek, App Store-ready experiences.
+  <p class="mt-5 md:mt-6 text-gray-300 text-base sm:text-lg md:text-2xl italic tracking-wide animate-fadeInSlow max-w-3xl mx-auto">
+    Building sleek mobile apps, Android experiences and full stack products ready for real users.
   </p>
 
   <!-- Glassmorphism skill badges -->
-  <div class="flex justify-center gap-3 mt-8 animate-fadeInSlow">
+  <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mt-6 md:mt-8 animate-fadeInSlow max-w-3xl mx-auto">
     <span class="backdrop-blur-md bg-white/10 text-white/90 px-4 py-1.5 rounded-full text-sm font-medium border border-white/20">
       SwiftUI
     </span>
@@ -67,7 +67,13 @@
       iOS Development
     </span>
     <span class="backdrop-blur-md bg-white/10 text-white/90 px-4 py-1.5 rounded-full text-sm font-medium border border-white/20">
-      App Store Launches
+      Android App Development
+    </span>
+    <span class="backdrop-blur-md bg-white/10 text-white/90 px-4 py-1.5 rounded-full text-sm font-medium border border-white/20">
+      Full Stack Development
+    </span>
+    <span class="backdrop-blur-md bg-white/10 text-white/90 px-4 py-1.5 rounded-full text-sm font-medium border border-white/20">
+      App & Play Store Launches
     </span>
   </div>
 </header>
@@ -80,13 +86,37 @@
   }
   .animate-fadeIn { animation: fadeIn 1s ease-out forwards; }
   .animate-fadeInSlow { animation: fadeIn 1.6s ease-out forwards; }
+  .work-grid > div > img {
+    width: 100%;
+    height: 11rem;
+    object-fit: cover;
+    background: #111827;
+  }
+  .work-grid a {
+    max-width: 100%;
+  }
+  @media (max-width: 640px) {
+    .work-grid > div {
+      transform: none !important;
+    }
+    .work-grid a {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  @media (min-width: 768px) {
+    .work-grid > div > img {
+      height: 12.5rem;
+    }
+  }
 </style>
 
 
 
 
 <!-- Previous Work Section -->
-<section class="relative py-28 md:py-36 bg-black text-white">
+<section class="relative px-4 sm:px-6 lg:px-10 py-14 sm:py-20 md:py-36 bg-black text-white">
   
   <!-- Section header -->
   <div class="mb-12">
@@ -95,10 +125,10 @@
     <span class="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full opacity-70"></span>
     </h2>
     <p class="text-gray-400 text-lg md:text-xl max-w-2xl">
-      A showcase of iOS apps I’ve built and launched on the App Store.
+      A showcase of iOS, Android and full stack apps I’ve built and launched across the App Store, Play Store and production backends.
     </p>
   </div>
-<div class="grid gap-6 grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
+<div class="work-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6">
       <!-- Start pasting projects from HTML 1 -->
 <div class="bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 text-white h-full">
         <img src="imgs/cl.webp" alt="Carnet Lucie">
@@ -106,7 +136,7 @@
           <h3 class="text-xl font-semibold text-White-700">Carnet Lucie</h3>
           <p class="text-sm mt-2">Discover the best spots in Southern California — no scrolling, no guesswork.</p>
           <p class="text-xs mt-2 text-gray-400">Role: Developed from scratch</p>
-          <p class="text-xs mt-2 text-gray-500">Technologies: SwiftUI, Firebase, Google Maps</p>
+          <p class="text-xs mt-2 text-gray-500">Technologies: SwiftUI, Firebase, Google Maps, Full Stack Integrations</p>
           <a href="https://apps.apple.com/ca/app/carnet-lucie/id6747844349?uo=2"
    target="_blank"
    class="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full font-semibold text-sm shadow-md hover:bg-gray-100 transition mt-3">
@@ -131,7 +161,7 @@
           <h3 class="text-xl font-semibold text-White-700">Boredom Fixer AI</h3>
           <p class="text-sm mt-2">AI app giving kids boredom-busting activities tailored by context..</p>
           <p class="text-xs mt-2 text-gray-400">Role: Developed from scratch</p>
-          <p class="text-xs mt-2 text-gray-500">Technologies: SwiftUI, OpenAi, In App Purchases</p>
+          <p class="text-xs mt-2 text-gray-500">Technologies: SwiftUI, OpenAI, In-App Purchases, Full Stack Integrations</p>
           <a href="https://apps.apple.com/us/app/boredom-fixer-ai/id6749782268"
    target="_blank"
    class="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full font-semibold text-sm shadow-md hover:bg-gray-100 transition mt-3">
@@ -154,7 +184,7 @@
         <div class="p-6">
           <h3 class="text-xl font-semibold text-White-700">Amihear</h3>
           <p class="text-sm mt-2">Join thousands using the ultimate hearing aid app, AmiHear — empowering better hearing experiences.</p>
-          <p class="text-xs mt-2 text-gray-500">Technologies: Swift, UIKit, API Integrations</p>
+          <p class="text-xs mt-2 text-gray-500">Technologies: Swift, UIKit, API Integrations, Full Stack Support</p>
           <a href="https://apps.apple.com/us/app/amihear-hearing-aid-app/id1567250077"
    target="_blank"
    class="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full font-semibold text-sm shadow-md hover:bg-gray-100 transition mt-3">
@@ -176,8 +206,8 @@
         <img src="imgs/Dg.webp" alt="DigiForum">
         <div class="p-6">
           <h3 class="text-xl font-semibold text-White-700">DigiForum</h3>
-          <p class="text-sm mt-2">A dynamic platform with dedicated rooms for photos taken with phones, tablets, and more. Trusted by Many photographers.</p>
-          <p class="text-xs mt-2 text-gray-500">Technologies: Swift, Objective-C, Java, Kotlin</p>
+          <p class="text-sm mt-2">A dynamic mobile platform with dedicated rooms for phone and tablet photography, delivered across iOS and Android.</p>
+          <p class="text-xs mt-2 text-gray-500">Technologies: Swift, Objective-C, Java, Kotlin, Android App Development</p>
         
 <!-- Start pasting projects from HTML 1
 <a href="https://play.google.com/store/apps/details?id=com.vbulletin.build_8148"
@@ -211,7 +241,7 @@
         <img src="imgs/tc.webp" alt="TopRent">
         <div class="p-6">
           <h3 class="text-xl font-semibold text-White-700">TopRent</h3>
-          <p class="text-sm mt-2">Optimizing car reservation tasks for TopRent’s drivers for more efficient and stress-free workflows.</p>
+          <p class="text-sm mt-2">Cross-platform driver app optimizing car reservation workflows across iOS and Android with local storage and backend API integrations.</p>
           <p class="text-xs mt-2 text-gray-500">Technologies: React Native, Swift, Kotlin, SQLite, API Integrations</p>
           <a href="https://apps.apple.com/us/app/top-rent-app/id6451073442"
    target="_blank"
@@ -235,7 +265,7 @@
         <div class="p-6">
           <h3 class="text-xl font-semibold text-White-700">Zestlog</h3>
           <p class="text-sm mt-2">Forget generic workouts. Zestlog crafts personalized plans engineered for your unique body type.</p>
-          <p class="text-xs mt-2 text-gray-500">Technologies: Swift, OpenAi, Firebase, API Integrations, Charts, Lottie iOS </p>
+          <p class="text-xs mt-2 text-gray-500">Technologies: Swift, OpenAI, Firebase, API Integrations, Charts, Lottie iOS, Full Stack Integrations</p>
           
           <a href="https://apps.apple.com/in/app/zestlog-fitness-home-gym/id1601695472"
    target="_blank"
@@ -261,7 +291,7 @@
           <h3 class="text-xl font-semibold text-White-700">Shoot Counter</h3>
           <p class="text-sm mt-2">Forget after training to log important details? This app ensures the shot load of barrels is always traceable.</p>
           <p class="text-xs mt-2 text-gray-400">Role: Developed from scratch</p>
-          <p class="text-xs mt-2 text-gray-500">Technologies: Swift, UIKit, SQLite, Charts</p>
+          <p class="text-xs mt-2 text-gray-500">Technologies: Swift, UIKit, SQLite, Charts, Full App Architecture</p>
  <a href="https://apps.apple.com/us/app/shot-counter-shooting-diary/id1587514166"
    target="_blank"
    class="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full font-semibold text-sm shadow-md hover:bg-gray-100 transition mt-3">
@@ -286,7 +316,7 @@
         <div class="p-6">
           <h3 class="text-xl font-semibold text-White-700">Hoot</h3>
           <p class="text-sm mt-2">"Hoot" helps communities coordinate events, wants, and needs in a unified way.</p>
-          <p class="text-xs mt-2 text-gray-500">Technologies: Swift, Firebase, Push Notifications</p>
+          <p class="text-xs mt-2 text-gray-500">Technologies: Swift, Firebase, Push Notifications, Full Stack Integrations</p>
           <span class="text-gray-500 text-xs mt-2 inline-block">Not available on public store</span>
           <a href="https://www.freelancer.com/u/MzHashmi?review_context_id=18221952&review_type=project&frm=MzHashmi&sb=t"
    target="_blank"
@@ -303,7 +333,7 @@
           <h3 class="text-xl font-semibold text-White-700">Ring Korn</h3>
           <p class="text-sm mt-2">In order to consistently achieve high performance with top results in shooting sports, an optimal and consistent sight picture is a prerequisite.</p>
           <p class="text-xs mt-2 text-gray-400">Role: Developed from scratch</p>
-          <p class="text-xs mt-2 text-gray-500">Technologies: Swift, UIKit, SQLite, Charts</p>
+          <p class="text-xs mt-2 text-gray-500">Technologies: Swift, UIKit, SQLite, Charts, Full App Architecture</p>
  <a href="https://apps.apple.com/us/app/ringkorngr%C3%B6sse-axia-farbfilter/id1568919927"
    target="_blank"
    class="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full font-semibold text-sm shadow-md hover:bg-gray-100 transition mt-3">
@@ -328,7 +358,7 @@
           <h3 class="text-xl font-semibold text-White-700">La Que Buena Atlanta</h3>
           <p class="text-sm mt-2"> Stay connected with Atlanta’s top Latin radio station. Stream live shows, access exclusive content, and stay updated with the latest hits and community events.
  </p>
-          <p class="text-xs mt-2 text-gray-500">Technologies: Swift, UIKit, AVFoundation, API Integrations</p>
+          <p class="text-xs mt-2 text-gray-500">Technologies: Swift, UIKit, AVFoundation, API Integrations, Full Stack Support</p>
  <a href="https://apps.apple.com/us/app/la-que-buena-atlanta/id1053229619"
    target="_blank"
    class="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full font-semibold text-sm shadow-md hover:bg-gray-100 transition mt-3">
@@ -366,8 +396,8 @@
         <img src="imgs/smart-meal.jpg" alt="SmartMeal: Nutrition, Wellness">
         <div class="p-6">
           <h3 class="text-xl font-semibold text-White-700">SmartMeal</h3>
-          <p class="text-sm mt-2">A nutrition and meal-planning app for exploring meals, viewing nutrition and allergen details, logging intake, and personalizing food choices.</p>
-          <p class="text-xs mt-2 text-gray-500">Category: Food & Drink</p>
+          <p class="text-sm mt-2">A nutrition and meal-planning app for iOS and Android, covering meal discovery, nutrition data, allergen details, logging, and personalization.</p>
+          <p class="text-xs mt-2 text-gray-500">Category: Food & Drink, Android App Development, Full Stack Integrations</p>
           <a href="https://apps.apple.com/ca/app/smartmeal-nutrition-wellness/id6755205383"
    target="_blank"
    class="inline-block mt-4 bg-white text-black px-4 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-gray-100 transition">
@@ -385,8 +415,8 @@
         <img src="imgs/skedaddle-services.jpg" alt="Skedaddle Services">
         <div class="p-6">
           <h3 class="text-xl font-semibold text-White-700">Skedaddle Services</h3>
-          <p class="text-sm mt-2">On-demand auto, home, and personal services platform with location-based provider matching, request tracking, scheduling, and secure payments.</p>
-          <p class="text-xs mt-2 text-gray-500">Category: Lifestyle, Business</p>
+          <p class="text-sm mt-2">Full-stack services platform with customer and admin apps for provider matching, request tracking, scheduling, payments, and operations.</p>
+          <p class="text-xs mt-2 text-gray-500">Category: Lifestyle, Business, Full Stack Development</p>
           <a href="https://apps.apple.com/us/app/skedaddle-services/id6751522431"
    target="_blank"
    class="inline-block mt-4 bg-white text-black px-4 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-gray-100 transition">
@@ -404,8 +434,8 @@
         <img src="imgs/revio.jpg" alt="Revio - AI">
         <div class="p-6">
           <h3 class="text-xl font-semibold text-White-700">Revio - AI</h3>
-          <p class="text-sm mt-2">A business messaging assistant that uses AI to suggest what to say next, helping creators and teams turn follower conversations into sales.</p>
-          <p class="text-xs mt-2 text-gray-500">Category: Business</p>
+          <p class="text-sm mt-2">A full-stack business messaging assistant that uses AI to suggest what to say next, helping creators and teams turn follower conversations into sales.</p>
+          <p class="text-xs mt-2 text-gray-500">Category: Business, AI Integrations, Full Stack Development</p>
           <a href="https://apps.apple.com/us/app/revio-ai/id6477441834"
    target="_blank"
    class="inline-block mt-4 bg-white text-black px-4 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-gray-100 transition">
@@ -418,8 +448,8 @@
         <img src="imgs/account-check.jpg" alt="Account Check">
         <div class="p-6">
           <h3 class="text-xl font-semibold text-White-700">Account Check</h3>
-          <p class="text-sm mt-2">Saudi-available awareness tool for checking social account links, usernames, and phone numbers against community reports before engaging.</p>
-          <p class="text-xs mt-2 text-gray-500">Category: Reference</p>
+          <p class="text-sm mt-2">Saudi-available iOS and Android awareness tool for checking social account links, usernames, and phone numbers against community reports.</p>
+          <p class="text-xs mt-2 text-gray-500">Category: Reference, Android App Development, Full Stack Integrations</p>
           <span class="text-gray-500 text-xs mt-2 inline-block">Only available in Saudi Arabia</span>
           <a href="https://apps.apple.com/app/accountcheck/id6756529524"
    target="_blank"
@@ -438,8 +468,8 @@
         <img src="imgs/plantvalue.jpg" alt="PlantValue">
         <div class="p-6">
           <h3 class="text-xl font-semibold text-White-700">PlantValue</h3>
-          <p class="text-sm mt-2">Industrial plant dashboard app for real-time production data, operational monitoring, reports, alerts, and data-driven performance analysis.</p>
-          <p class="text-xs mt-2 text-gray-500">Category: Utilities, Productivity, Tools</p>
+          <p class="text-sm mt-2">Industrial iOS and Android dashboard app for real-time production data, operational monitoring, reports, alerts, and performance analysis.</p>
+          <p class="text-xs mt-2 text-gray-500">Category: Utilities, Productivity, Tools, Android App Development</p>
           <a href="https://apps.apple.com/us/app/plantvalue/id1445572320"
    target="_blank"
    class="inline-block mt-4 bg-white text-black px-4 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-gray-100 transition">
@@ -491,7 +521,7 @@
 
  <!-- Reviews Section -->
 <!-- Client Reviews Section -->
-<section class="relative py-28 md:py-36 bg-black text-white">
+<section class="relative px-4 sm:px-6 lg:px-10 py-14 sm:py-20 md:py-36 bg-black text-white">
   
   <!-- Section header -->
   <div class="mb-12">
@@ -503,11 +533,11 @@
       What clients say about working with me on Upwork and beyond.
     </p>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
     
     <!-- Review 1 -->
-    <div class="bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
-      <p class="italic text-lg">"I am thrilled with the result. Very flexible and he made all requests possible."</p>
+    <div class="bg-white bg-opacity-10 backdrop-blur-lg p-5 sm:p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+      <p class="italic text-base sm:text-lg">"I am thrilled with the result. Very flexible and he made all requests possible."</p>
       <a href="https://www.freelancer.com/u/MzHashmi?review_context_id=29355332&review_type=project&frm=MzHashmi&sb=t"
          target="_blank"
          class="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition">
@@ -516,8 +546,8 @@
     </div>
 
     <!-- Review 2 -->
-    <div class="bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
-      <p class="italic text-lg">"Moheed is very familiar with iOS. He is also a hard working guy. He worked even after project was complete."</p>
+    <div class="bg-white bg-opacity-10 backdrop-blur-lg p-5 sm:p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+      <p class="italic text-base sm:text-lg">"Moheed is very familiar with iOS. He is also a hard working guy. He worked even after project was complete."</p>
       <a href="https://www.freelancer.com/u/MzHashmi?review_context_id=32881609&review_type=project&frm=MzHashmi&sb=t"
          target="_blank"
          class="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition">
@@ -526,8 +556,8 @@
     </div>
 
     <!-- Review 3 -->
-    <div class="bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
-      <p class="italic text-lg">"Just the best of the best. Thank you for your professionalism, competence and high degree of knowledge."</p>
+    <div class="bg-white bg-opacity-10 backdrop-blur-lg p-5 sm:p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+      <p class="italic text-base sm:text-lg">"Just the best of the best. Thank you for your professionalism, competence and high degree of knowledge."</p>
       <a href="https://www.freelancer.com/u/MzHashmi?review_context_id=36574704&review_type=project&frm=MzHashmi&sb=t"
          target="_blank"
          class="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition">
@@ -536,8 +566,8 @@
     </div>
 
     <!-- Review 4 -->
-    <div class="bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
-      <p class="italic text-lg">"All was great. Good relationship."</p>
+    <div class="bg-white bg-opacity-10 backdrop-blur-lg p-5 sm:p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+      <p class="italic text-base sm:text-lg">"All was great. Good relationship."</p>
       <a href="https://www.freelancer.com/u/MzHashmi?review_context_id=37115221&review_type=project&reviewee_role=freelancer&frm=MzHashmi&sb=t"
          target="_blank"
          class="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition">
@@ -546,8 +576,8 @@
     </div>
 
     <!-- Review 5 -->
-    <div class="bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
-      <p class="italic text-lg">"Moheed is a skilled iOS developer and completed our iOS project successfully."</p>
+    <div class="bg-white bg-opacity-10 backdrop-blur-lg p-5 sm:p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+      <p class="italic text-base sm:text-lg">"Moheed is a skilled iOS developer and completed our iOS project successfully."</p>
       <a href="https://www.upwork.com/ab/g/pub/wom/prx/eyJwZXJzb25VaWQiOiI5MzYwMDE0Nzk5NDc0ODUxODQiLCJjb250cmFjdFJpZCI6IjM5MTIzNDAwIiwiYmFubmVyVHlwZSI6ImNvbnRyYWN0IiwiYmFubmVyVmFyaWFudCI6ImRlZmF1bHQiLCJ3b20iOiJmbHYyIiwicmVkaXJlY3QiOiJmbF9wcm9maWxlX3Byb21vIn0=?network=linkedin"
          target="_blank"
          class="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition">
@@ -556,8 +586,8 @@
     </div>
 
     <!-- Review 6 -->
-    <div class="bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
-      <p class="italic text-lg">"Showed great initiative in resolving my overall problem, instead of just performing individual tasks."</p>
+    <div class="bg-white bg-opacity-10 backdrop-blur-lg p-5 sm:p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+      <p class="italic text-base sm:text-lg">"Showed great initiative in resolving my overall problem, instead of just performing individual tasks."</p>
       <a href="https://www.upwork.com/freelancers/moheedz?promobnr=1"
          target="_blank"
          class="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition">
@@ -566,8 +596,8 @@
     </div>
 
     <!-- Review 7 -->
-    <div class="bg-white bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
-      <p class="italic text-lg">"He was polite, and was willing to work late hours to complete the task. When presented with some bugs, he was patient and understanding."</p>
+    <div class="bg-white bg-opacity-10 backdrop-blur-lg p-5 sm:p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+      <p class="italic text-base sm:text-lg">"He was polite, and was willing to work late hours to complete the task. When presented with some bugs, he was patient and understanding."</p>
       <a href="https://www.freelancer.com/u/MzHashmi?review_context_id=18221952&review_type=project&frm=MzHashmi&sb=t"
          target="_blank"
          class="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition">
@@ -599,11 +629,11 @@
     </path></svg>
 
 <!-- About Me Section -->
-<section class="url(#blackGradient)">
+<section class="url(#blackGradient) px-4 sm:px-6 py-10">
   <div class="max-w-4xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold mb-4">About Me</h2>
-    <p class="text-lg leading-relaxed">
-      I’m Moheed Zafar, a seasoned iOS developer with 6+ years of experience. I've built several high-quality, intuitive apps like <strong>Cruuz</strong>, <strong>Toprent</strong>, <strong>Zestlog</strong>, <strong>Track Focus</strong>, <strong>SmartMeal</strong>, <strong>Skedaddle Services</strong>, <strong>Revio - AI</strong>, <strong>Account Check</strong>, <strong>PlantValue</strong> and <strong>Moves - Let's Party</strong>.
+    <p class="text-base sm:text-lg leading-relaxed">
+      I’m Moheed Zafar, a seasoned iOS, Android and full stack developer with 6+ years of experience. I've built several high quality, intuitive apps like <strong>Cruuz</strong>, <strong>Toprent</strong>, <strong>Zestlog</strong>, <strong>Track Focus</strong>, <strong>SmartMeal</strong>, <strong>Skedaddle Services</strong>, <strong>Revio - AI</strong>, <strong>Account Check</strong> <strong>PlantValue</strong> and <strong>Moves - Let's Party</strong>.
     </p>
   </div>
   <!-- <div class="mt-5 flex flex-wrap justify-center space-x-6 text-sm font-medium text-primary">
